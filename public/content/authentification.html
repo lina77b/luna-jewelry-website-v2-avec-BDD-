@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Connectez-vous à votre compte Luna Jewelry.">
+    <link rel="icon" type="image/png" href="/images/logo.png">
+    <title>Luna Jewelry - Connexion</title>
+    <link rel="stylesheet" href="/style/styles.css">
+</head>
+<body>
+    <header id="site-header"></header>
+    <main>
+        <div class="contenu">
+            <div class="header">
+                <h1>Connexion</h1>
+                <p>Connectez-vous à votre compte Luna Jewelry.</p>
+            </div>
+            <form id="connexion">
+                <div class="formulaire">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Votre email" required>
+                </div>
+                <div class="formulaire">
+                    <label for="password">Mot de passe</label>
+                    <div class="input-group">
+                        <input type="password" id="password" placeholder="Votre mot de passe" required>
+
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">Se connecter</button>
+                <p id="form-error" class="error"></p>
+            </form>
+            <div class="social-connexion">
+                <button class="btn social google"><img src="/images/google.png" alt="Google"> Se connecter avec Google</button>
+
+            </div>
+            <p class="link">Pas de compte ? <a href="/content/inscription.html">Inscrivez-vous</a></p>
+        </div>
+    </main>
+    <footer id="site-footer"></footer>
+    <script src="/javascript/api.js"></script>
+    <script src="/javascript/header.js"></script>
+    <script src="/javascript/script.js"></script>
+    <script src="/javascript/auth.js"></script>
+</body>
+</html>

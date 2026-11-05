@@ -1,0 +1,52 @@
+{
+  "name": "luna-jewelry",
+  "version": "1.0.0",
+  "description": "Boutique Luna Jewelry - projet universitaire de bases de données PostgreSQL",
+  "author": "lina77b (https://github.com/lina77b)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lina77b/luna-jewelry.git"
+  },
+  "homepage": "https://github.com/lina77b/luna-jewelry#readme",
+  "bugs": {
+    "url": "https://github.com/lina77b/luna-jewelry/issues"
+  },
+  "keywords": [
+    "postgresql",
+    "express",
+    "row-level-security",
+    "sql",
+    "plpgsql",
+    "e-commerce",
+    "nodejs"
+  ],
+  "private": true,
+  "main": "server/server.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "db:up": "docker compose up -d --wait",
+    "db:down": "docker compose stop",
+    "db:psql": "docker compose exec db psql -U luna -d luna",
+    "db:setup": "node scripts/setup-db.js",
+    "db:demo": "node scripts/setup-db.js --demo",
+    "db:bench": "node scripts/setup-db.js --bench",
+    "db:reset": "node scripts/setup-db.js --reset",
+    "db:roles": "node scripts/setup-db.js --roles",
+    "start": "node server/server.js",
+    "test": "node --test tests/api.test.js && node --test tests/fonctions.test.js && node --test tests/concurrence.test.js && node --test tests/rls.test.js && node --test tests/limites.test.js",
+    "db:stats": "node scripts/setup-db.js --stats"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-pg-simple": "^9.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^8.7.0",
+    "express-session": "^1.18.0",
+    "helmet": "^8.3.0",
+    "pg": "^8.12.0"
+  },
+  "license": "MIT"
+}

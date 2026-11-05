@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Administration de Luna Jewelry.">
+    <link rel="icon" type="image/png" href="/images/logo.png">
+    <title>Luna Jewelry - Administration</title>
+    <link rel="stylesheet" href="/style/styles.css">
+</head>
+<body>
+    <header id="site-header"></header>
+    <main>
+        <section class="products" id="admin-acces" hidden>
+            <h2>Administration</h2>
+            <p class="error active" id="admin-refus"></p>
+        </section>
+        <section class="products" id="admin-contenu" hidden>
+            <h2>Tableau de bord</h2>
+            <div class="admin-barre">
+                <button type="button" class="btn btn-petit" id="rafraichir">Rafraîchir la vue matérialisée</button>
+                <span id="rafraichir-info"></span>
+            </div>
+            <div class="admin-grille">
+                <div class="carte-admin"><h3>Chiffre d'affaires par mois (DZD)</h3><canvas id="graph-mois"></canvas></div>
+                <div class="carte-admin"><h3>Meilleures ventes (quantités)</h3><canvas id="graph-ventes"></canvas></div>
+                <div class="carte-admin"><h3>Chiffre d'affaires par wilaya (DZD)</h3><canvas id="graph-wilaya"></canvas></div>
+                <div class="carte-admin"><h3>Commandes par statut</h3><canvas id="graph-statuts"></canvas></div>
+            </div>
+            <div class="carte-admin">
+                <h3>Stock faible (moins de 5 unités)</h3>
+                <div class="table-wrap">
+                    <table class="table-admin">
+                        <thead><tr><th>Produit</th><th>Stock</th></tr></thead>
+                        <tbody id="stock-faible"></tbody>
+                    </table>
+                </div>
+            </div>
+            <h2 class="titre-section">Commandes</h2>
+            <div class="admin-barre">
+                <label for="filtre-statut">Statut</label>
+                <select id="filtre-statut">
+                    <option value="">Tous</option>
+                    <option value="en_attente">En attente</option>
+                    <option value="confirmee">Confirmée</option>
+                    <option value="expediee">Expédiée</option>
+                    <option value="livree">Livrée</option>
+                    <option value="annulee">Annulée</option>
+                </select>
+            </div>
+            <div class="table-wrap">
+                <table class="table-admin">
+                    <thead>
+                        <tr><th>N°</th><th>Date</th><th>Client</th><th>Wilaya</th><th>Statut</th><th>Total</th><th>Actions</th></tr>
+                    </thead>
+                    <tbody id="commandes-admin"></tbody>
+                </table>
+            </div>
+            <p class="error" id="admin-erreur"></p>
+            <div class="pagination">
+                <button type="button" class="btn btn-contour" id="charger-plus" hidden>Charger plus</button>
+            </div>
+        </section>
+    </main>
+    <footer id="site-footer"></footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.js"></script>
+    <script src="/javascript/api.js"></script>
+    <script src="/javascript/header.js"></script>
+    <script src="/javascript/script.js"></script>
+    <script src="/javascript/admin.js"></script>
+</body>
+</html>
