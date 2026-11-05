@@ -1,6 +1,6 @@
 # Luna Jewelry
 
-[![CI](https://github.com/lina77b/luna-jewelry/actions/workflows/ci.yml/badge.svg)](https://github.com/lina77b/luna-jewelry/actions/workflows/ci.yml)
+[![CI](https://github.com/lina77b/luna-jewelry-website-v2-avec-BDD-/actions/workflows/ci.yml/badge.svg)](https://github.com/lina77b/luna-jewelry-website-v2-avec-BDD-/actions/workflows/ci.yml)
 ![PostgreSQL 16](https://img.shields.io/badge/PostgreSQL-16-336791?logo=postgresql&logoColor=white)
 ![Node.js 18+](https://img.shields.io/badge/Node.js-18%2B-339933?logo=nodedotjs&logoColor=white)
 ![Licence MIT](https://img.shields.io/badge/licence-MIT-c9a227)
